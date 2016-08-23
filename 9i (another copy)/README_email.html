@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+  <TITLE>9.0.1 Sample Mailing List Browser Application Readme</TITLE>
+  <LINK href="../styles.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<h1>9.0.1 Sample Mailing List Browser Application README</h1>
+<H2>Table of Contents</H2>
+<blockquote> <A REL="CHAPTER" HREF="#CHP1">1. Introduction</A> <br>
+  <A REL="CHAPTER" HREF="#CHP2">2. Configuring the Sample Mailing List Browser Application</A><br>
+  <A REL="CHAPTER" HREF="#CHP3">3. Sample Mailing List Browser Application Files</A> <br>
+</blockquote>
+<H2><A NAME="CHP1"></A>1. Introduction</H2>
+<blockquote> 
+  <p>Oracle Ultra Search provides a sample mailing list browser written in JSP.
+    The mailing list browser can display email addressed to mailing lists that
+    have been indexed by the Ultra Search system. </p>
+
+  <p>The sample mailing list browser invokes the Oracle Ultra Search email API. 
+     The complete and comprehensive documentation is provided in the following 
+     document:</p>
+
+  <ul>
+    <li>Ultra Search Java Email API 9.0.1</li>
+  </ul>
+
+  <p>With this release of Ultra Search, the sample mailing list browser application
+     no longer uses the high-level API that outputs HTML. The applications user-interface 
+     logic is entirely controlled in the JSP, therefore the look-and-feel can
+     be completely customized to your needs. </p>
+
+</blockquote>
+<h2><A NAME="CHP2">2. Configuring the Sample Mailing List Browser Application</a></h2>
+<blockquote> 
+  <p>For detailed instructions on setting up the sample JSP mailing list browser application,
+     see <a href="README.html#CHP2">
+    Configuring the Sample Query Application
+  </a>.</p>
+</blockquote>
+<H2><A NAME="CHP3"></A>3. Sample Mailing List Browser Application Files </H2>
+<UL>
+  <p>The sample mailing list browser applications files are located in the <font face="Courier New, Courier, mono">$ORACLE_HOME/ultrasearch/sample/query/9i</font> 
+    directory. You can directly view the sample mailing list browser application source code 
+    using your preferred text editor. </p>
+  <p>The following tables list and describe all sample mailing list browser application files:</p>
+  <h3><b>README File and Stylesheets</b> </h3>
+  <table width="75%" border="1">
+    <tr> 
+      <td bgcolor="#000060" width="25%"><font color="#FFFFFF"><b>File</b></font></td>
+      <td bgcolor="#000060" width="75%"><font color="#FFFFFF"><b>Description</b></font></td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"><font face="Courier New, Courier, mono">README_email.html</font></td>
+      <td width="75%">This file</td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"> <font face="Courier New, Courier, mono">../mail.css</font></td>
+      <td width="75%">Style sheet for sample email Web application</td>
+    </tr>
+  </table>
+
+  <h3> <b>Sample Java Server Page Mailing List Browser Applications Files </b></h3>
+  <table width="75%" border="1">
+    <tr> 
+      <td bgcolor="#000060" width="25%"><font color="#FFFFFF"><b>File</b></font></td>
+      <td bgcolor="#000060" width="75%"><font color="#FFFFFF"><b>Description</b></font></td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"><font face="Courier New, Courier, mono">mail.jsp</font></td>
+      <td width="75%">Mailing list browser applications that selectively include 
+        HTML code returned by other JSP files, depending on what the end user 
+        wants to view</td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"><font face="Courier New, Courier, mono">mailindex.jsp</font></td>
+      <td width="75%">JSP page that displays all email sources (mailing lists) 
+        of an Ultra Search instance</td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"> <font face="Courier New, Courier, mono">mailmsgs.jsp</font></td>
+      <td width="75%">JSP page that displays all emails for an email source (mailing 
+        list).</td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"> <font face="Courier New, Courier, mono">mailreader.jsp</font></td>
+      <td width="75%">JSP page that displays an email (non-framed version)</td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"> <font face="Courier New, Courier, mono">mailreaderf.jsp</font></td>
+      <td width="75%">JSP page that displays an email (framed version)</td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"> <font face="Courier New, Courier, mono">mailutil.jsp</font></td>
+      <td width="75%">JSP page that defines various functions that are used by 
+        <font face="Courier New, Courier, mono">mailreader.jsp</font> (non-framed version)</td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"> <font face="Courier New, Courier, mono">mailutilf.jsp</font></td>
+      <td width="75%">JSP page that defines various functions that are used by 
+        <font face="Courier New, Courier, mono">mailreader.jsp</font> (framed version)</td>
+    </tr>
+  </table>
+
+  <h3><b>Graphics Files for All Applications</b><br>
+  </h3>
+  <table width="75%" border="1">
+    <tr> 
+      <td bgcolor="#000060" width="25%"><font color="#FFFFFF"><b>File</b></font></td>
+      <td bgcolor="#000060" width="75%"><font color="#FFFFFF"><b>Description</b></font></td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"><font face="Courier New, Courier, mono">../images/ultra_mediumbanner.gif</font></td>
+      <td width="75%">Ultra Search banner</td>
+    </tr>
+    <tr valign="top"> 
+      <td width="25%"> <font face="Courier New, Courier, mono">../images/wsd.gif</font></td>
+      <td width="75%">Background image used in sample query application</td>
+    </tr>
+  </table>
+</UL>
+</BODY>
+</HTML>

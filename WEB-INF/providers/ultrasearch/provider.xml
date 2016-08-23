@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?providerDefinition version="3.1"?>
+
+<provider class="oracle.portal.provider.v2.DefaultProviderDefinition">
+   <session>true</session>
+   <useOldStyleHeaders>false</useOldStyleHeaders>
+   <passAllUrlParams>true</passAllUrlParams>
+
+   <preferenceStore class="oracle.portal.provider.v2.preference.FilePreferenceStore">
+      <name>ultraSearchPreferenceStore</name>
+      <useHashing>true</useHashing>
+    </preferenceStore>
+
+   <portlet class="oracle.portal.provider.v2.DefaultPortletDefinition">
+      <id>1</id>
+      <resource>oracle.ultrasearch.query.app.SearchPortletResBun</resource>
+      <timeout>10000</timeout>
+      <acceptContentType>text/html</acceptContentType>
+      <showEdit>true</showEdit>
+      <showEditToPublic>true</showEditToPublic>
+      <showEditDefault>true</showEditDefault>
+      <showPreview>false</showPreview>
+      <showDetails>false</showDetails>
+      <hasHelp>true</hasHelp>
+      <hasAbout>false</hasAbout>
+      <defaultLocale>en.US</defaultLocale>
+      <renderer class="oracle.portal.provider.v2.render.RenderManager">
+        <contentType>text/html</contentType>
+        <charSet>UTF-8</charSet>
+        <renderContainer>true</renderContainer>
+        <renderCustomize>false</renderCustomize>
+        <showPage class="oracle.portal.provider.v2.render.http.ResourceRenderer" >
+          <resourcePath>/portlet/search.jsp</resourcePath>
+          <contentType>text/html</contentType>
+        </showPage>
+        <editPage>/portlet/search_customizer.jsp</editPage>
+        <editDefaultsPage>/portlet/search_edit_defaults.jsp</editDefaultsPage>
+        <helpPage>/portlet/help.jsp</helpPage>
+      </renderer>
+      <personalizationManager class="oracle.portal.provider.v2.personalize.PrefStorePersonalizationManager" >
+         <dataClass>oracle.ultrasearch.query.app.SearchPortletCustomizer</dataClass>
+      </personalizationManager>
+   </portlet>
+
+</provider>
